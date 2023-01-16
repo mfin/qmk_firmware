@@ -1,0 +1,372 @@
+[
+  {
+    "name": "Ferris"
+  },
+  [
+    {
+      "x": 2,
+      "c": "#f7f2ea",
+      "t": "#5d437e\n#d02f1c\n#00773a\n\n\n\n\n\n\n#171718",
+      "fa": [
+        1,
+        1,
+        1
+      ]
+    },
+    "3\n3\nF3\n\n\n\n\n\n\nE",
+    {
+      "x": 6.25
+    },
+    "8\n8\nF8\n\n\n\n\n\n\nI"
+  ],
+  [
+    {
+      "y": -0.6,
+      "x": 1
+    },
+    "2\n2\nF2\n\n\n\n\n\n\nW",
+    {
+      "x": 1
+    },
+    "4\n4\nF4\n\n\n\n\n\n\nR",
+    {
+      "x": 4.25
+    },
+    "7\n7\nF7\n\n\n\n\n\n\nU",
+    {
+      "x": 1
+    },
+    "9\n9\nF9\n\n\n\n\n\n\nO"
+  ],
+  [
+    {
+      "y": -0.8999999999999999,
+      "x": 4
+    },
+    "5\n5\nF5\n\n\n\n\n\n\nT",
+    {
+      "x": 2.25
+    },
+    "6\n6\nF6\n\n\n\n\n\n\nY"
+  ],
+  [
+    {
+      "y": -0.5,
+      "x": 2,
+      "t": "#5d437e\n#d02f1c\n#00773a\n\n\n\n\n\n\n#171718\n#171718",
+      "fa": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "-\n#\n<i class='kb kb-Unicode-Screen-Bright'></i>\n\n\n\n\n\n\nD\nCtrl",
+    {
+      "x": 6.25,
+      "fa": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "<i class='kb kb-Arrows-Up'></i>\n<i class='kb kb-Arrows-Up'></i>\nBT 2\n\n\n\n\n\n\nK\nCtrl"
+  ],
+  [
+    {
+      "y": -0.8700000000000001,
+      "t": "#5d437e\n#d02f1c\n#00773a\n\n\n\n\n\n\n#171718",
+      "fa": [
+        1,
+        1,
+        1
+      ]
+    },
+    "1\n1\nF1\n\n\n\n\n\n\nQ",
+    {
+      "x": 10.25
+    },
+    "0\n0\nF10\n\n\n\n\n\n\nP"
+  ],
+  [
+    {
+      "y": -0.75,
+      "x": 1,
+      "t": "#5d437e\n#d02f1c\n#00773a\n\n\n\n\n\n\n#171718\n#171718",
+      "fa": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "\n@\n<i class='fa fa-volume-up'></i>\n\n\n\n\n\n\nS\nAlt",
+    {
+      "x": 1
+    },
+    "_\n$\n<i class='kb kb-Multimedia-Play'></i>\n\n\n\n\n\n\nF\nShift",
+    {
+      "x": 4.25,
+      "fa": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "<i class='kb kb-Arrows-Down'></i>\n<i class='kb kb-Arrows-Down'></i>\nBT 1\n\n\n\n\n\n\nJ\nShift",
+    {
+      "x": 1
+    },
+    "<i class='kb kb-Arrows-Right'></i>\n<i class='kb kb-Arrows-Right'></i>\nBT 3\n\n\n\n\n\n\nL\nAlt"
+  ],
+  [
+    {
+      "y": -0.8799999999999999,
+      "x": 4,
+      "t": "#5d437e\n#d02f1c\n#00773a\n\n\n\n\n\n\n#171718",
+      "fa": [
+        1,
+        1
+      ]
+    },
+    "[\n%\n<i class='kb kb-Multimedia-FastForward-End'></i>\n\n\n\n\n\n\nG",
+    {
+      "x": 2.25,
+      "fa": [
+        0,
+        0,
+        1
+      ]
+    },
+    "<i class='kb kb-Arrows-Left'></i>\n<i class='kb kb-Arrows-Left'></i>\nBT 0\n\n\n\n\n\n\nH"
+  ],
+  [
+    {
+      "y": -0.5,
+      "x": 2,
+      "fa": [
+        1,
+        1
+      ]
+    },
+    "=\n*\n<i class='kb kb-Unicode-Screen-Dim'></i>\n\n\n\n\n\n\nC",
+    {
+      "x": 6.25,
+      "fa": [
+        0,
+        0,
+        1
+      ]
+    },
+    "<i class='kb kb-Arrows-Top-4'></i>\n<i class='kb kb-Arrows-Top-4'></i>\nOut tog\n\n\n\n\n<\n\n,"
+  ],
+  [
+    {
+      "y": -0.8700000000000001,
+      "t": "#5d437e\n#d02f1c\n\n\n\n\n\n\n\n#171718\n#171718",
+      "fa": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "Tab\n!\n\n\n\n\n\n\n\nA\nSuper",
+    {
+      "x": 10.25,
+      "t": "#5d437e\n#d02f1c\n#00773a\n\n\n\n\n\n\n#171718\n#171718",
+      "fa": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "\n'\nBT 4\n\n\n\n\n:\n\n;\nSuper"
+  ],
+  [
+    {
+      "y": -0.75,
+      "x": 1,
+      "t": "#5d437e\n#d02f1c\n#00773a\n\n\n\n\n\n\n#171718",
+      "fa": [
+        1,
+        1
+      ]
+    },
+    "\n&\n<i class='fa fa-volume-down'></i>\n\n\n\n\n\n\nX",
+    {
+      "x": 1
+    },
+    "+\n(\n<i class='kb kb-Multimedia-Pause'></i>\n\n\n\n\n\n\nV",
+    {
+      "x": 4.25,
+      "fa": [
+        0,
+        0,
+        1
+      ]
+    },
+    "<i class='kb kb-Arrows-Bottom-4'></i>\n<i class='kb kb-Arrows-Bottom-4'></i>\nEP tog\n\n\n\n\n\n\nM",
+    {
+      "x": 1
+    },
+    "<i class='kb kb-Line-End'></i>\n<i class='kb kb-Line-End'></i>\nPrtScr\n\n\n\n\n>\n\n."
+  ],
+  [
+    {
+      "y": -0.8799999999999999,
+      "x": 4,
+      "fa": [
+        1,
+        1
+      ]
+    },
+    "]\n)\n<i class='kb kb-Multimedia-Rewind-Start'></i>\n\n\n\n\n\n\nB",
+    {
+      "x": 2.25,
+      "fa": [
+        0,
+        0,
+        1
+      ]
+    },
+    "<i class='kb kb-Line-Start'></i>\n<i class='kb kb-Line-Start'></i>\nBT clr\n\n\n\n\n\n\nN"
+  ],
+  [
+    {
+      "y": -0.3700000000000001,
+      "fa": [
+        1,
+        1
+      ]
+    },
+    "`\n^\n<i class='fa fa-volume-off'></i>\n\n\n\n\n\n\nZ",
+    {
+      "x": 10.25,
+      "c": "#00773a",
+      "t": "\n#d02f1c\n\n\n\n\n\n\n\n#171718\n#171718",
+      "fa": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "\n\\\n\n\n\n\n\n?\n\n/\nAdjust"
+  ],
+  [
+    {
+      "r": 15,
+      "rx": 4.25,
+      "ry": 4.1,
+      "y": -0.39999999999999947,
+      "x": -0.75,
+      "c": "#d02f1c",
+      "t": "#171718",
+      "a": 5
+    },
+    "\nLower\n\n\n\n\nEsc"
+  ],
+  [
+    {
+      "r": 30,
+      "rx": 4,
+      "ry": 4.3,
+      "y": -0.7999999999999998,
+      "x": 0.5,
+      "c": "#c3c3ba",
+      "a": 7,
+      "f": 3
+    },
+    "Enter"
+  ],
+  [
+    {
+      "r": -30,
+      "rx": 10.25,
+      "ry": 4,
+      "y": -1.6,
+      "x": -3.5,
+      "f": 3
+    },
+    "Space"
+  ],
+  [
+    {
+      "r": -15,
+      "rx": 10.5,
+      "ry": 4.1,
+      "y": -0.9999999999999996,
+      "x": -2.75,
+      "c": "#5d437e",
+      "t": "#171718\n\n#00773a",
+      "a": 4,
+      "fa": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "\n\nGame\n\n\n\n\n\n\nBack\nRaise"
+  ]
+]
