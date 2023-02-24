@@ -22,8 +22,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 enum custom_keycodes {
     G_CMT = SAFE_RANGE,
-    G_PSH,
-    B_FND,
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -34,27 +32,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             SEND_STRING("git add -A && git commit -m '' && git push"SS_TAP(X_LEFT)SS_TAP(X_LEFT)SS_TAP(X_LEFT)SS_TAP(X_LEFT)SS_TAP(X_LEFT)SS_TAP(X_LEFT)SS_TAP(X_LEFT)SS_TAP(X_LEFT)SS_TAP(X_LEFT)SS_TAP(X_LEFT)SS_TAP(X_LEFT)SS_TAP(X_LEFT)SS_TAP(X_LEFT));
         }
         break;
-
-    case B_FND:
-        if (record->event.pressed) {
-            SEND_STRING("find . -iname ''"SS_TAP(X_LEFT));
-        }
-        break;
     }
 
     return true;
-};
-
-enum combo_events {
-  QW_G_CMT,
-  COMBO_LENGTH
-};
-uint16_t COMBO_LEN = COMBO_LENGTH;
-
-const uint16_t PROGMEM qwGcmt[] = {KC_1, KC_2, COMBO_END};
-
-combo_t key_combos[] = {
-  [QW_G_CMT] = COMBO(qwGcmt, G_CMT),
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -70,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* Layer 1: Function layer */
   [SECONDARY] = LAYOUT_tkl_iso(
     QK_BOOT,          KC_BRID, KC_BRIU, KC_CALC, KC_MYCM, _______, _______, _______, _______, _______, _______, _______, _______,    KC_PSCR, KC_SCRL, KC_PAUS,
-    _______, KC_F13,  KC_F14,  KC_F15,  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,    B_FND,   G_CMT,   _______,
+    _______, KC_F13,  KC_F14,  KC_F15,  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,    G_CMT,   _______, _______,
     _______, _______, _______, _______, _______, _______, KC_HOME, KC_PGDN, KC_PGUP, KC_END,  _______, _______, _______,             _______, _______, _______,
     _______, _______, _______, _______, _______, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______, _______, _______,
     _______, _______, _______, _______, _______, _______, KC_INS,  KC_DEL,  _______, _______, _______, _______,          _______,             KC_MPLY,
