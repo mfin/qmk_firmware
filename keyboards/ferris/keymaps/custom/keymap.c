@@ -172,26 +172,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 };
 
-// layer_state_t layer_state_set_kb(layer_state_t state) {
-//     switch (get_highest_layer(state)) {
-//     case _RAISE:
-//         if (is_keyboard_left())
-//             set_bitc_LED(LED_ON);
-//         break;
-//     case _LOWER:
-//         if (!is_keyboard_left())
-//             set_bitc_LED(LED_ON);
-//         break;
-//     case _FUNCTION:
-//         set_bitc_LED(LED_ON);
-//         break;
-//     default:
-//         set_bitc_LED(LED_OFF);
-//         break;
-//     }
-//   return state;
-// }
-
 void housekeeping_task_user(void) {
     if (IS_LAYER_ON(_FUNCTION)) {
         set_bitc_LED(LED_ON);
