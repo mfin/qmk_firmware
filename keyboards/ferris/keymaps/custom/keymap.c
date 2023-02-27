@@ -19,6 +19,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 enum combo_events {
   CMB_ESC,
   CMB_DEL,
+  CMB_CAPSWORD,
   COMBO_LENGTH
 };
 
@@ -26,10 +27,12 @@ uint16_t COMBO_LEN = COMBO_LENGTH;
 
 const uint16_t PROGMEM combo_we[] = {KC_W, KC_E, COMBO_END};
 const uint16_t PROGMEM combo_io[] = {KC_I, KC_O, COMBO_END};
+const uint16_t PROGMEM combo_gh[] = {KC_G, KC_H, COMBO_END};
 
 combo_t key_combos[] = {
   [CMB_ESC] = COMBO(combo_we, KC_ESC),
   [CMB_DEL] = COMBO(combo_io, KC_DEL),
+  [CMB_CAPSWORD] = COMBO(combo_gh, QK_CAPS_WORD_TOGGLE),
 };
 
 enum ferris_layers {
