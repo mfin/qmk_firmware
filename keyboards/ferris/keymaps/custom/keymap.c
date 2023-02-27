@@ -6,6 +6,7 @@ enum custom_keycodes {
     CK_TASK_VIEW,
     CK_NEXT_WS,
     CK_PREV_WS,
+    CK_QUIT,
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -31,6 +32,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CK_PREV_WS:
         if (record->event.pressed) {
             SEND_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_LEFT))));
+        }
+        break;
+
+    case CK_QUIT:
+        if (record->event.pressed) {
+            SEND_STRING(SS_LALT(SS_TAP(X_F4)));
         }
         break;
     }
@@ -99,10 +106,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_MISC] = LAYOUT(
-    QK_BOOT, KC_TRNS, CK_PREV_WS, CK_NEXT_WS, CK_TASK_VIEW,         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_VOLU,
+    KC_TRNS, CK_QUIT, CK_PREV_WS, CK_NEXT_WS, CK_TASK_VIEW,         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_VOLU,
     KC_TRNS, KC_TRNS, KC_TRNS,    KC_CAPS,    KC_TRNS,              KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, KC_VOLD,
     KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,              KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, KC_MUTE,
-                                              KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
+                                              KC_TRNS, KC_TRNS, KC_TRNS, QK_BOOT
   )
 };
 
