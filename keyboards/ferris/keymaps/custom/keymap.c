@@ -73,15 +73,16 @@ combo_t key_combos[] = {
 
 enum ferris_layers {
   _BASE,
-  _NAVFUN,
-  _SYMNUM,
+  _NAV,
+  _NUM,
+  _SYM,
   _MISC
 };
 
-#define SPC_2 LT(2, KC_SPC)
+#define SPC_3 LT(3, KC_SPC)
 #define ENT_1 LT(1, KC_ENT)
 #define BSPC_SF RSFT_T(KC_BSPC)
-#define TAB_SF LSFT_T(KC_TAB)
+#define TAB_2 LT(2, KC_TAB)
 #define S_CTL LCTL_T(KC_S)
 #define D_GUI GUI_T(KC_D)
 #define F_ALT LALT_T(KC_F)
@@ -96,21 +97,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Q, KC_W,  KC_E,  KC_R,  KC_T,            KC_Y, KC_U,  KC_I,    KC_O,   KC_P,
     KC_A, S_CTL, D_GUI, F_ALT, KC_G,            KC_H, J_ALT, K_GUI,   L_CTL,  KC_SCLN,
     KC_Z, KC_X,  KC_C,  KC_V,  KC_B,            KC_N, KC_M,  KC_COMM, KC_DOT, SLSH_ALTGR,
-                            TAB_SF, ENT_1, SPC_2, BSPC_SF
+                            TAB_2, ENT_1, SPC_3, BSPC_SF
   ),
 
-  [_NAVFUN] = LAYOUT(
-    CK_CLOSE, KC_F7, KC_F8, KC_F9, KC_F12,         KC_TRNS, KC_TRNS, KC_INS,  KC_TRNS, KC_PSCR,
-    KC_TRNS,  KC_F4, KC_F5, KC_F6, KC_F11,         KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_TRNS,
-    KC_TRNS,  KC_F1, KC_F2, KC_F3, KC_F10,         KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_TRNS,
-                             KC_TRNS, KC_TRNS, MO(3), KC_TRNS
+  [_NAV] = LAYOUT(
+    KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,         KC_TRNS, KC_TRNS, KC_INS,  KC_TRNS, KC_PSCR,
+    KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,         KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_TRNS,
+    KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,         KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_TRNS,
+                                    KC_TRNS, KC_TRNS, MO(4), KC_TRNS
   ),
 
-  [_SYMNUM] = LAYOUT(
+  [_NUM] = LAYOUT(
     KC_TRNS, KC_TRNS, KC_EQL,  KC_MINS, KC_NUHS,         KC_TRNS, KC_7, KC_8, KC_9, KC_TRNS,
     KC_GRV,  KC_LBRC, KC_LCBR, KC_LPRN, KC_QUOT,         KC_TRNS, KC_4, KC_5, KC_6, KC_TRNS,
     KC_NUBS, KC_RBRC, KC_RCBR, KC_RPRN, CK_DQUO,         KC_0,    KC_1, KC_2, KC_3, KC_TRNS,
-                                     KC_TRNS, MO(3), KC_TRNS, KC_TRNS
+                                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
+  ),
+
+  [_SYM] = LAYOUT(
+    KC_TRNS, KC_TRNS, KC_EQL,  KC_MINS, KC_NUHS,         KC_TRNS, KC_7, KC_8, KC_9, KC_TRNS,
+    KC_GRV,  KC_LBRC, KC_LCBR, KC_LPRN, KC_QUOT,         KC_TRNS, KC_4, KC_5, KC_6, KC_TRNS,
+    KC_NUBS, KC_RBRC, KC_RCBR, KC_RPRN, CK_DQUO,         KC_0,    KC_1, KC_2, KC_3, KC_TRNS,
+                                     KC_TRNS, MO(4), KC_TRNS, KC_TRNS
   ),
 
   [_MISC] = LAYOUT(
@@ -124,9 +132,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 void housekeeping_task_user(void) {
     if (IS_LAYER_ON(_MISC)) {
         set_bitc_LED(LED_ON);
-    } else if (IS_LAYER_ON(_NAVFUN) && !is_keyboard_left()) {
+    } else if (IS_LAYER_ON(_NAV) && !is_keyboard_left()) {
         set_bitc_LED(LED_ON);
-    } else if (IS_LAYER_ON(_SYMNUM) && is_keyboard_left()) {
+    } else if (IS_LAYER_ON(_SYM) && is_keyboard_left()) {
         set_bitc_LED(LED_ON);
     } else {
         set_bitc_LED(LED_OFF);
