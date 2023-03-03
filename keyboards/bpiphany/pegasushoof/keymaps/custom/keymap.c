@@ -40,22 +40,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 };
 
-layer_state_t layer_state_set_user(layer_state_t state) {
-    switch (get_highest_layer(state)) {
-    case SECONDARY:
-        ph_sclk_led_on();
-        break;
-    default:
-        ph_sclk_led_off();
-        break;
-    }
-  return state;
-}
-
-void led_set_user(uint8_t usb_led) {
-  if (usb_led & (1 << USB_LED_CAPS_LOCK)) {
-    ph_caps_led_on();
-  } else {
-    ph_caps_led_off();
-  }
+void matrix_scan_user(void)
+{
+	uint8_t layer = get_highest_layer(layer_state);
+	switch (layer) {
+		case PRIMARY:
+			writePin(LED_SCROLL_LOCK_PIN, !LED_PIN_ON_STATE);
+			break;
+		case SECONDARY:
+			writePin(LED_SCROLL_LOCK_PIN, LED_PIN_ON_STATE);
+			break;
+	}
 }
