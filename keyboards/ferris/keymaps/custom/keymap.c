@@ -74,15 +74,15 @@ combo_t key_combos[] = {
 enum ferris_layers {
   _BASE,
   _NAV,
-  _NUM,
   _SYM,
+  _NUM,
   _MISC
 };
 
-#define SPC_3 LT(3, KC_SPC)
+#define SPC_2 LT(2, KC_SPC)
 #define ENT_1 LT(1, KC_ENT)
 #define BSPC_SF RSFT_T(KC_BSPC)
-#define TAB_2 LT(2, KC_TAB)
+#define TAB_3 LT(3, KC_TAB)
 #define S_CTL LCTL_T(KC_S)
 #define D_GUI GUI_T(KC_D)
 #define F_ALT LALT_T(KC_F)
@@ -97,33 +97,33 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Q, KC_W,  KC_E,  KC_R,  KC_T,            KC_Y, KC_U,  KC_I,    KC_O,   KC_P,
     KC_A, S_CTL, D_GUI, F_ALT, KC_G,            KC_H, J_ALT, K_GUI,   L_CTL,  KC_SCLN,
     KC_Z, KC_X,  KC_C,  KC_V,  KC_B,            KC_N, KC_M,  KC_COMM, KC_DOT, SLSH_ALTGR,
-                            TAB_2, ENT_1, SPC_3, BSPC_SF
+                            TAB_3, ENT_1, SPC_2, BSPC_SF
   ),
 
   [_NAV] = LAYOUT(
-    KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,         KC_TRNS, KC_TRNS, KC_INS,  KC_TRNS, KC_PSCR,
-    KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,         KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_TRNS,
+    KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,         KC_TRNS, KC_TRNS, KC_INS,  KC_TRNS, KC_TRNS,
+    KC_TRNS,  KC_LCTL, KC_LGUI, KC_LALT, KC_TRNS,         KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_TRNS,
     KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,         KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_TRNS,
                                     KC_TRNS, KC_TRNS, MO(4), KC_TRNS
   ),
 
-  [_NUM] = LAYOUT(
-    KC_TRNS, KC_TRNS, KC_EQL,  KC_MINS, KC_NUHS,         KC_TRNS, KC_7, KC_8, KC_9, KC_TRNS,
-    KC_GRV,  KC_LBRC, KC_LCBR, KC_LPRN, KC_QUOT,         KC_TRNS, KC_4, KC_5, KC_6, KC_TRNS,
-    KC_NUBS, KC_RBRC, KC_RCBR, KC_RPRN, CK_DQUO,         KC_0,    KC_1, KC_2, KC_3, KC_TRNS,
-                                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
+  [_SYM] = LAYOUT(
+    KC_TRNS, KC_TRNS, KC_EQL,  KC_MINS, KC_NUHS,         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+    KC_GRV,  KC_LBRC, KC_LCBR, KC_LPRN, KC_QUOT,         KC_TRNS, KC_LALT, KC_LGUI, KC_LCTL, KC_TRNS,
+    KC_NUBS, KC_RBRC, KC_RCBR, KC_RPRN, CK_DQUO,         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+                                     KC_TRNS, MO(4), KC_TRNS, KC_TRNS
   ),
 
-  [_SYM] = LAYOUT(
-    KC_TRNS, KC_TRNS, KC_EQL,  KC_MINS, KC_NUHS,         KC_TRNS, KC_7, KC_8, KC_9, KC_TRNS,
-    KC_GRV,  KC_LBRC, KC_LCBR, KC_LPRN, KC_QUOT,         KC_TRNS, KC_4, KC_5, KC_6, KC_TRNS,
-    KC_NUBS, KC_RBRC, KC_RCBR, KC_RPRN, CK_DQUO,         KC_0,    KC_1, KC_2, KC_3, KC_TRNS,
-                                     KC_TRNS, MO(4), KC_TRNS, KC_TRNS
+  [_NUM] = LAYOUT(
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,         KC_TRNS, KC_7, KC_8, KC_9, KC_TRNS,
+    KC_TRNS, KC_LCTL, KC_LGUI, KC_LALT, KC_TRNS,         KC_TRNS, KC_4, KC_5, KC_6, KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,         KC_0,    KC_1, KC_2, KC_3, KC_TRNS,
+                                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
   ),
 
   [_MISC] = LAYOUT(
     CK_QUIT, KC_TRNS, CK_PREV_WS, CK_NEXT_WS, CK_TASK_VIEW,         KC_MPLY, KC_MPRV, KC_MNXT, KC_MSTP, KC_VOLU,
-    KC_TRNS, KC_TRNS, KC_TRNS,    KC_CAPS,    KC_TRNS,              KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, KC_VOLD,
+    KC_TRNS, KC_PSCR, KC_TRNS,    KC_CAPS,    KC_TRNS,              KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, KC_VOLD,
     KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,              KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, KC_MUTE,
                                               KC_TRNS, KC_TRNS, KC_TRNS, QK_BOOT
   )
