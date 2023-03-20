@@ -94,3 +94,30 @@ const uint16_t PROGMEM encoder_map[][1][2] = {
     [WIN_FN]   = {ENCODER_CCW_CW(MAC_ZOUT, MAC_ZIN) }
 };
 #endif
+
+bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
+    if (host_keyboard_led_state().caps_lock) {
+        RGB_MATRIX_INDICATOR_SET_COLOR(CAPS_LOCK_LED_INDEX, 255, 0, 0);
+    } else {
+        if (!rgb_matrix_get_flags()) {
+           RGB_MATRIX_INDICATOR_SET_COLOR(CAPS_LOCK_LED_INDEX, 0, 0, 0);
+        }
+    }
+
+    return false;
+}
+
+// void matrix_scan_user(void)
+// {
+// 	uint8_t layer = get_highest_layer(layer_state);
+// 	switch (layer) {
+// 		case WIN_FN:
+// 			rgb_matrix_set_color(LAYER_INDICATOR_LED_INDEX, 255, 0, 0);
+// 			break;
+//         default: // for any other layers, or the default layer
+//             if (!rgb_matrix_get_flags()) {
+//                 rgb_matrix_set_color(LAYER_INDICATOR_LED_INDEX, 0, 0, 0);
+//             }
+//             break;
+// 	}
+// }
