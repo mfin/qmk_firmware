@@ -3,11 +3,6 @@
 
 enum custom_keycodes {
     CK_DQUO = SAFE_RANGE,
-    CK_TASK_VIEW,
-    CK_NEXT_WS,
-    CK_PREV_WS,
-    CK_QUIT,
-    CK_CLOSE,
     MAC_SCRN,
     MAC_EMOJ
 };
@@ -17,36 +12,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CK_DQUO:
         if (record->event.pressed) {
             SEND_STRING(SS_LSFT("2"));
-        }
-        break;
-
-    case CK_TASK_VIEW:
-        if (record->event.pressed) {
-            SEND_STRING(SS_LCMD(SS_TAP(X_TAB)));
-        }
-        break;
-
-    case CK_NEXT_WS:
-        if (record->event.pressed) {
-            SEND_STRING(SS_LCMD(SS_LCTL(SS_TAP(X_RIGHT))));
-        }
-        break;
-
-    case CK_PREV_WS:
-        if (record->event.pressed) {
-            SEND_STRING(SS_LCMD(SS_LCTL(SS_TAP(X_LEFT))));
-        }
-        break;
-
-    case CK_QUIT:
-        if (record->event.pressed) {
-            SEND_STRING(SS_LOPT(SS_TAP(X_F4)));
-        }
-        break;
-
-    case CK_CLOSE:
-        if (record->event.pressed) {
-            SEND_STRING(SS_LCTL(SS_TAP(X_W)));
         }
         break;
 
@@ -104,6 +69,8 @@ enum ferris_layers {
 #define K_OPT OPT_T(KC_K)
 #define L_CTL RCTL_T(KC_L)
 #define SCLN_MEH MEH_T(KC_SCLN)
+#define PREV_WS LCTL(KC_LEFT)
+#define NEXT_WS LCTL(KC_RIGHT)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -115,7 +82,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_NAV] = LAYOUT(
-    _______,  _______, _______, _______, _______,         _______, _______, KC_INS,  _______, _______,
+    _______,  _______, PREV_WS, NEXT_WS, _______,         _______, _______, KC_INS,  _______, _______,
     KC_MEH,   KC_LCTL, KC_LOPT, KC_LCMD, _______,         KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______,
     _______,  _______, _______, _______, _______,         KC_HOME, KC_PGDN, KC_PGUP, KC_END,  _______,
                                     _______, _______, MO(4), _______
@@ -136,10 +103,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_MISC] = LAYOUT(
-    CK_QUIT, _______,  CK_PREV_WS, CK_NEXT_WS, CK_TASK_VIEW,         KC_MPLY, KC_MPRV, KC_MNXT, KC_MSTP, KC_VOLU,
-    _______, MAC_SCRN, MAC_EMOJ,   KC_CAPS,    _______,              KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, KC_VOLD,
-    _______, _______,  _______,    _______,    _______,              KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, KC_MUTE,
-                                              _______, _______, _______, QK_BOOT
+    _______, _______,  _______,  _______, _______,         KC_MUTE, _______, _______, _______, _______,
+    _______, MAC_SCRN, MAC_EMOJ, KC_CAPS, _______,         KC_VOLU, KC_MPLY, KC_MPRV, KC_MNXT, KC_MSTP,
+    _______, _______,  _______,  _______, _______,         KC_VOLD, _______, _______, _______, _______,
+                                     _______, _______, _______, QK_BOOT
   )
 };
 
